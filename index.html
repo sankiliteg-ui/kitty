@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Morning, Little Kitty! 🐱</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom Tailwind Configuration for a cute, soft aesthetic -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'morning-sky': '#fef3c7', // Light yellow/cream
+                        'kitty-pink': '#f472b6', // Soft pink
+                        'kitty-blue': '#93c5fd', // Soft blue
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        // Adding a playful, cute font-like appearance via styling
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                        pulseShadow: {
+                            '0%, 100%': { 'box-shadow': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)' },
+                            '50%': { 'box-shadow': '0 20px 25px -5px rgba(244, 114, 182, 0.5), 0 8px 10px -6px rgba(244, 114, 182, 0.2)' },
+                        }
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 1s ease-out forwards',
+                        'pulse-shadow': 'pulseShadow 4s ease-in-out infinite',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Apply the custom font and some basic styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom styles to control GIF container size and look */
+        .gif-container {
+            border-radius: 0.75rem; /* rounded-xl */
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            max-width: 300px; /* Limit size of individual GIF containers */
+            width: 100%;
+        }
+        .gif-container:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(244, 114, 182, 0.5);
+        }
+
+        /* Initial animation delay setup */
+        .animate-delay-1 { animation-delay: 0.3s; }
+        .animate-delay-2 { animation-delay: 0.6s; }
+        .animate-delay-3 { animation-delay: 0.9s; }
+        .animate-delay-4 { animation-delay: 1.2s; }
+
+        /* Ensure GIF embeds are contained */
+        .tenor-gif-embed {
+            min-height: 200px; /* Prevent collapse before load */
+        }
+        
+        /* === EXPLICIT MEDIA QUERY FOR SMALLER PHONES === */
+        /* This ensures the main title doesn't overflow or look awkward on very narrow screens (<400px) */
+        @media (max-width: 400px) {
+            .super-title {
+                font-size: 3.5rem !important; /* Slightly decrease H1 size */
+                line-height: 1.1; /* Tighten the line height */
+            }
+        }
+    </style>
+</head>
+<body class="bg-morning-sky min-h-screen flex items-center justify-center p-4">
+
+    <!-- Main Content Card -->
+    <!-- Increased padding on the smallest screen (p-4) for better edge clearance -->
+    <div class="w-full max-w-4xl bg-white rounded-3xl p-4 sm:p-10 lg:p-16 shadow-2xl transition-all duration-500 animate-pulse-shadow">
+
+        <header class="text-center mb-10">
+            <!-- Title 1: GOOD MORNING LITTLE KITTY -->
+            <!-- Added super-title class for the media query above -->
+            <h1 class="super-title text-5xl sm:text-7xl font-extrabold text-kitty-pink leading-tight opacity-0 animate-fade-in-up">
+                GOOD MORNING
+            </h1>
+            <!-- Changed the text color for the secondary title on mobile to match the pink theme better -->
+            <h2 class="text-3xl sm:text-5xl font-bold text-gray-700 sm:text-gray-700 text-pink-600 mt-2 mb-8 opacity-0 animate-fade-in-up animate-delay-1">
+                LITTLE KITTY! 😻
+            </h2>
+
+            <!-- Title 2: YOU ARE LOOKING VERY PRETTY -->
+            <p class="text-xl sm:text-2xl font-semibold text-kitty-blue italic opacity-0 animate-fade-in-up animate-delay-2">
+                YOU ARE LOOKING VERY PRETTY
+            </p>
+        </header>
+
+        <!-- GIF Section -->
+        <main class="grid grid-cols-1 md:grid-cols-2 gap-8 justify-items-center">
+
+            <!-- GIF 1: Pudgy Penguin Coffee Time -->
+            <div class="gif-container opacity-0 animate-fade-in-up animate-delay-3">
+                <div class="tenor-gif-embed" data-postid="9279164475368727988" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/pengu-pudgy-penguin-pudgypenguins-coffee-time-gif-9279164475368727988">Pengu Pudgy Sticker</a> from <a href="https://tenor.com/search/pengu-stickers">Pengu Stickers</a>
+                </div>
+            </div>
+
+            <!-- GIF 2: Wake Up Juju -->
+            <div class="gif-container opacity-0 animate-fade-in-up animate-delay-4">
+                <div class="tenor-gif-embed" data-postid="4196294556297846980" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+                    <a href="https://tenor.com/view/juwakeup3-wakupjuju-wakelolju-gif-4196294556297846980">Juwakeup3 Wakupjuju Sticker</a> from <a href="https://tenor.com/search/juwakeup3-stickers">Juwakeup3 Stickers</a>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="text-center mt-10 text-gray-500 text-sm">
+            <!-- Subtle footer text -->
+            <p>A beautiful morning greeting, just for you. ✨</p>
+        </footer>
+    </div>
+
+    <!-- Script to load Tenor GIFs -->
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+</body>
+</html>
